@@ -8,8 +8,13 @@ const users = [
 
 const UserSearch: FC = () => {
   const [name, setName] = useState("");
+  const [user, setUser] = useState<{ name: string; age: number } | null>();
   const onSearchHandler = () => {
-    console.log("search");
+    const foundUser = users.find((user) => {
+      return user.name === name;
+    });
+
+    setUser(foundUser);
   };
   return (
     <div>
@@ -20,6 +25,10 @@ const UserSearch: FC = () => {
         type="text"
       />
       <button onClick={onSearchHandler}>Find User</button>
+      <div>
+        {user && user.name}
+        {user && user.age}
+      </div>
     </div>
   );
 };
