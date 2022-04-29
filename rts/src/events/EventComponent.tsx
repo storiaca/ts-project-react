@@ -1,9 +1,13 @@
 import React, { FC } from "react";
 
 const EventComponent: FC = () => {
+  const handlerChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event);
+  };
+
   return (
     <div>
-      <input onChange={(e) => console.log(e)} />
+      <input onChange={handlerChange} />
     </div>
   );
 };
