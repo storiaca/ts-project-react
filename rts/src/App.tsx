@@ -1,6 +1,7 @@
 import React from "react";
 //import GuestList from "./state/GuestList";
-import UserSearch from "./state/UserSearch";
+//import UserSearch from "./state/UserSearch";
+import UserSearch from "./refs/UserSearch";
 //import EventComponent from "./events/EventComponent";
 import "./App.css";
 
