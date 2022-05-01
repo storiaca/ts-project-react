@@ -1,7 +1,4 @@
 import React from "react";
-//import GuestList from "./state/GuestList";
-import UserSearch from "./state/UserSearch";
-//import EventComponent from "./events/EventComponent";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -9,7 +6,6 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>App</h1>
-        <UserSearch />
       </header>
     </div>
   );
