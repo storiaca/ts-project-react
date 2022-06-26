@@ -1,10 +1,23 @@
-import React from "react";
-import logo from "./logo.svg";
+import { useState } from "react";
 
 function App() {
+  const [input, setInput] = useState("");
+  const [code, setCode] = useState("");
+
+  const onClick = () => {
+    console.log(input);
+  };
+
   return (
     <div>
-      <h1>App</h1>
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      ></textarea>
+      <div>
+        <button onClick={onClick}>Submit</button>
+      </div>
+      <pre></pre>
     </div>
   );
 }
