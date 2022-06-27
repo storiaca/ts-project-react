@@ -17,12 +17,17 @@ function App() {
     startService();
   }, []);
 
-  const onClick = () => {
+  const onClick = async () => {
     if (!ref.current) {
       return;
     }
 
-    console.log(ref.current);
+    const result = await ref.current.transform(input, {
+      loader: "jsx",
+      target: "es2015",
+    });
+
+    setCode(result.code);
   };
 
   return (
@@ -34,7 +39,7 @@ function App() {
       <div>
         <button onClick={onClick}>Submit</button>
       </div>
-      <pre></pre>
+      <pre>{code}</pre>
     </div>
   );
 }
