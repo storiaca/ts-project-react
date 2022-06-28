@@ -10,9 +10,17 @@ https://esbuild.github.io/
 
 npm view react dist.tarball
 
-### Result
+### Result for react dist.tarball
 
 https://registry.npmjs.org/react/-/react-18.2.0.tgz
+
+## UNPKG for react
+
+https://unpkg.com/react
+
+### Link for react
+
+https://unpkg.com/react@18.2.0/index.js
 
 ## Available Scripts
 
