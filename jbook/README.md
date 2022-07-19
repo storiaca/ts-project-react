@@ -22,6 +22,10 @@ https://unpkg.com/react
 
 https://unpkg.com/react@18.2.0/index.js
 
+## Local Forage
+
+https://www.npmjs.com/package/localforage
+
 ## Available Scripts
 
 In the project directory, you can run:
