@@ -31,11 +31,21 @@ export const fetchPlugin = (inputCode: string) => {
         }
         const { data, request } = await axios.get(args.path);
 
-        const loader = args.path.match(/.css$/) ? "css" : "jsx";
+        const fileType = args.path.match(/.css$/) ? "css" : "jsx";
 
+        const contents =
+          fileType === "css"
+            ? `
+            const style = document.createElement('style');
+            style.innerText = 'body { backround-color: "red" }';
+            document.head.appendChild(style);
+          `
+            : data;
+
+        // import 'bulma/css/bulma.css';
         const result: esbuild.OnLoadResult = {
-          loader: loader,
-          contents: data,
+          loader: "jsx",
+          contents,
           resolveDir: new URL("./", request.responseURL).pathname,
         };
         // store response in cache
