@@ -22,22 +22,27 @@ export const fetchPlugin = (inputCode: string) => {
 
         // Check to see if we have already fetched this file
         // and if it is in the cache
-        const cachedResult = await fileCache.getItem<esbuild.OnLoadResult>(
-          args.path
-        );
-        // if it is, return it immediately
-        if (cachedResult) {
-          return cachedResult;
-        }
+        // const cachedResult = await fileCache.getItem<esbuild.OnLoadResult>(
+        //   args.path
+        // );
+        // // if it is, return it immediately
+        // if (cachedResult) {
+        //   return cachedResult;
+        // }
         const { data, request } = await axios.get(args.path);
 
         const fileType = args.path.match(/.css$/) ? "css" : "jsx";
+
+        const escaped = data
+          .replace(/\n/g, "")
+          .replace(/"/g, '\\"')
+          .replace(/'/g, "\\'");
 
         const contents =
           fileType === "css"
             ? `
             const style = document.createElement('style');
-            style.innerText = 'body { backround-color: "red" }';
+            style.innerText = '${escaped}';
             document.head.appendChild(style);
           `
             : data;
