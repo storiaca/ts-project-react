@@ -35,9 +35,14 @@ function App() {
       },
     });
 
-    console.log(result);
+    //console.log(result);
 
     setCode(result.outputFiles[0].text);
+    try {
+      eval(result.outputFiles[0].text);
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
