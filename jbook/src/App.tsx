@@ -55,9 +55,13 @@ function App() {
         <button onClick={onClick}>Submit</button>
       </div>
       <pre>{code}</pre>
-      <iframe sandbox="allow-same-origin" src="/test.html" />
+      <iframe sandbox="" srcDoc={html} />
     </div>
   );
 }
+
+const html = `
+  <h1>Local Html doc</h1>
+`;
 
 export default App;
