@@ -35,15 +35,14 @@ function App() {
       },
     });
 
-    //console.log(result);
-
     setCode(result.outputFiles[0].text);
-    try {
-      eval(result.outputFiles[0].text);
-    } catch (error) {
-      alert(error);
-    }
   };
+
+  const html = `
+    <script>
+      ${code}
+    </script>
+  `;
 
   return (
     <div>
@@ -55,13 +54,13 @@ function App() {
         <button onClick={onClick}>Submit</button>
       </div>
       <pre>{code}</pre>
-      <iframe sandbox="" srcDoc={html} />
+      <iframe
+        sandbox="allow-scripts"
+        srcDoc={html}
+        title="This is a unique title"
+      />
     </div>
   );
 }
-
-const html = `
-  <h1>Local Html doc</h1>
-`;
 
 export default App;
