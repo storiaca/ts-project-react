@@ -19,7 +19,7 @@ function App() {
     startService();
   }, []);
 
-  const onClick = async () => {
+  const onClick = async (input: string) => {
     if (!ref.current) {
       return;
     }
@@ -65,11 +65,12 @@ function App() {
     <div>
       <textarea
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => {
+          onClick(e.target.defaultValue);
+          setInput(e.target.value);
+        }}
       ></textarea>
-      <div>
-        <button onClick={onClick}>Submit</button>
-      </div>
+      <div>{/* <button onClick={onClick}>Submit</button> */}</div>
       <iframe
         ref={iframe}
         sandbox="allow-scripts"
