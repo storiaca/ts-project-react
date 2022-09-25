@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://esbuild.github.io/
 
+## Monaco editor react
+
+https://www.npmjs.com/package/@monaco-editor/react
+
+https://www.npmjs.com/package/@monaco-editor/react/v/3.7.5#controlled-editor
+
 ## View link for npm react
 
 npm view react dist.tarball
