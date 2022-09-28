@@ -8,6 +8,7 @@ const CodeEditor = () => {
       options={{
         wordWrap: "on",
       }}
+      // need to setup editor for js
     />
   );
 };
