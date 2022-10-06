@@ -14,7 +14,6 @@ interface CodeEditorProps {
 
 const CodeEditor: FC<CodeEditorProps> = ({ initialValue, onChange }) => {
   const editorRef = useRef<any>();
-  console.log(editorRef);
 
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     editorRef.current = monacoEditor;
