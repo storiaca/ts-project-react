@@ -32,6 +32,10 @@ https://unpkg.com/react@18.2.0/index.js
 
 https://www.npmjs.com/package/localforage
 
+## React resizable
+
+https://www.npmjs.com/package/react-resizable
+
 ## Available Scripts
 
 In the project directory, you can run:
