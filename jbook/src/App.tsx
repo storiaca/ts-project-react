@@ -2,7 +2,8 @@ import CodeCell from "./components/CodeCell";
 function App() {
   return (
     <div>
-      <CodeCell />;{/* <CodeCell />; */}
+      <CodeCell />
+      {/* <CodeCell />; */}
     </div>
   );
 }
