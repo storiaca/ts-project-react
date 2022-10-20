@@ -59,6 +59,4 @@ const Preview: FC<PreviewProps> = ({ code, bundlingStatus }) => {
   );
 };
 
-// add new feature
-
 export default Preview;
