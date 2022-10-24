@@ -36,6 +36,10 @@ https://www.npmjs.com/package/localforage
 
 https://www.npmjs.com/package/react-resizable
 
+## UIW React md editor
+
+https://www.npmjs.com/package/@uiw/react-md-editor
+
 ## Available Scripts
 
 In the project directory, you can run:
