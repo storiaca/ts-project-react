@@ -36,4 +36,4 @@ const reducer = (
   }
 };
 
-export {};
+export default reducer;
