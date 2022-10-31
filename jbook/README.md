@@ -44,6 +44,8 @@ https://www.npmjs.com/package/@uiw/react-md-editor
 
 https://www.npmjs.com/package/immer
 
+https://immerjs.github.io/immer/update-patterns
+
 ## Available Scripts
 
 In the project directory, you can run:
