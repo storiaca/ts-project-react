@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { usedTypedSelector } from "../hooks/usedTypedSelector";
 const CellList: FC = () => {
-  usedTypedSelector((state) => state);
+  const cells = usedTypedSelector(({ cells: { order, data } }) =>
+    order.map((id) => data[id])
+  );
   return <div>CellList</div>;
 };
 
