@@ -46,6 +46,10 @@ https://www.npmjs.com/package/immer
 
 https://immerjs.github.io/immer/update-patterns
 
+## Fontawesome free
+
+https://www.npmjs.com/package/@fortawesome/fontawesome-free
+
 ## Available Scripts
 
 In the project directory, you can run:
