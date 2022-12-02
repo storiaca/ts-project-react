@@ -1,10 +1,10 @@
 import { FC, Fragment } from "react";
-import { usedTypedSelector } from "../hooks/usedTypedSelector";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 import CellListItem from "./CellListItem";
 import AddCell from "./AddCell";
 
 const CellList: FC = () => {
-  const cells = usedTypedSelector(({ cells: { order, data } }) =>
+  const cells = useTypedSelector(({ cells: { order, data } }) =>
     order.map((id) => data[id])
   );
 
